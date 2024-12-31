@@ -1,3 +1,4 @@
+
 // import express from "express"
 // import cors from "cors";
 // import dotenv from "dotenv"
@@ -147,6 +148,9 @@ mongoose.connect(process.env.DB_URL, {
 // Include router
 app.use("/api/admin", adminRoutes);
 
+app.get('/', (req, res) => {
+    res.send('Hello, world! This is your app running.');
+  });
 // Start the server
 server.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
